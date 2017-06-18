@@ -5,6 +5,7 @@ Upgrades Archlinux systems
 ## Requirements
 
 - [https://github.com/cdown/ansible-aur](AUR module)
+- pacaur
 
 ## Role Variables
 
