@@ -1,0 +1,18 @@
+- name: Update 'pacman' cache
+  pacman:
+    update_cache: true
+
+- name: Get /etc/ssl/certs/ca-certificates.crt hash
+  stat:
+    path: /etc/ssl/certs/ca-certificates.crt
+  register: ca_certificates_stat
+
+- name: Delete outdated ca-certificates file before upgrade
+  file:
+    path: /etc/ssl/certs/ca-certificates.crt
+    state: absent
+  when: ca_certificates_stat.stat.checksum is defined and ca_certificates_stat.stat.checksum == "{{ upgrade_delete_checksum }}"
+
+- name: Update Arch Linux via 'pacman'
+  pacman:
+    upgrade: yes

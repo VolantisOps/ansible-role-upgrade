@@ -1,0 +1,3 @@
+---
+# Delete ca-certiticates file if it has this checksum
+upgrade_delete_checksum: 6aac3400f3ae5ed3bd736d71671c9e1ac1d379f1
