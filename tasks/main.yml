@@ -12,7 +12,7 @@
   file:
     path: /etc/ssl/certs/ca-certificates.crt
     state: absent
-  when: upgrade_delete and ca_certificates_stat.stat.checksum is defined and ca_certificates_stat.stat.checksum == "{{ upgrade_delete_checksum }}"
+  when: upgrade_delete and ca_certificates_stat.stat.checksum is defined and ca_certificates_stat.stat.checksum == upgrade_delete_checksum
 
 - name: Update Arch Linux via 'pacman'
   pacman:
