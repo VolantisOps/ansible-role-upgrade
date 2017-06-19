@@ -3,3 +3,4 @@
 upgrade_delete: false
 upgrade_delete_checksum: 6aac3400f3ae5ed3bd736d71671c9e1ac1d379f1
 upgrade_run_upgrade: false
+upgrade_enable_pacaur: false

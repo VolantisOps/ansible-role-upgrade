@@ -21,4 +21,4 @@
 
 - name: Update AUR packages via 'pacaur'
   command: pacaur -Syuq --noconfirm
-  when: upgrade_run_upgrade
+  when: upgrade_run_upgrade and upgrade_enable_pacaur
